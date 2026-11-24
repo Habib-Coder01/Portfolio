@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Habibulla Toshia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-50 text-slate-800 antialiased">
+
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-indigo-100/80 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-extrabold text-indigo-700 tracking-tight">&lt;Habibulla /&gt;</a>
+      <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="md:hidden w-10 h-10 rounded-lg border border-slate-200 bg-white flex items-center justify-center text-slate-700"><i class="fas fa-bars"></i></button>
+      <div class="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="nav-link hover:text-indigo-600 transition" data-page="index.html">Home</a>
+        <a href="about.html" class="nav-link hover:text-indigo-600 transition" data-page="about.html">About</a>
+        <a href="projects.html" class="nav-link hover:text-indigo-600 transition" data-page="projects.html">Projects</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition" data-page="contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-1 text-sm font-semibold text-slate-700">
+      <a href="index.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">Home</a>
+      <a href="about.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">About</a>
+      <a href="projects.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">Projects</a>
+      <a href="contact.html" class="px-4 py-2.5 rounded-lg bg-indigo-600 text-white text-center">Contact</a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-14 space-y-14">
+    <section>
+      <span class="font-mono text-xs font-bold uppercase tracking-widest text-indigo-600">About</span>
+      <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1 mb-4">Who I am</h1>
+      <p class="text-slate-600 leading-relaxed max-w-3xl">
+        Ami ekjon BSc in Computer Science &amp; Engineering student. Amar kaj software development ar research duitai niye. Ami Python, React, Flutter ar MySQL diye practical application banai, ar Agricultural Computer Vision, Remote Sensing ar Plant Pathology niye research kori.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-extrabold text-slate-900 mb-5">Education</h2>
+      <div class="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-lg">
+        <p class="font-mono text-xs uppercase tracking-widest text-teal-300">2023 – 2026</p>
+        <h3 class="text-xl font-bold mt-1">Bachelor of Science in Computer Science and Engineering</h3>
+        <p class="text-slate-300 mt-1">Daffodil International University</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-extrabold text-slate-900 mb-5">Skills</h2>
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-indigo-50 text-indigo-800">
+            <tr>
+              <th class="px-5 py-3 font-bold">Category</th>
+              <th class="px-5 py-3 font-bold">Skills</th>
+              <th class="px-5 py-3 font-bold">Level</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="px-5 py-3 font-semibold">Programming</td><td class="px-5 py-3">Python, C / C++, JavaScript, Dart, SQL</td><td class="px-5 py-3">Intermediate</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Frameworks</td><td class="px-5 py-3">React, Flutter, Tailwind CSS</td><td class="px-5 py-3">Intermediate</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">AI &amp; Research</td><td class="px-5 py-3">Deep Learning, Remote Sensing</td><td class="px-5 py-3">Learning</td></tr>
+            <tr><td class="px-5 py-3 font-semibold">Tools</td><td class="px-5 py-3">MySQL, Git &amp; GitHub, Kaggle, Figma, VS Code</td><td class="px-5 py-3">Intermediate</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-6 py-10 text-center text-xs text-slate-400 font-mono">Habibulla Toshia • 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>

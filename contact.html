@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Habibulla Toshia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-50 text-slate-800 antialiased">
+
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-indigo-100/80 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-extrabold text-indigo-700 tracking-tight">&lt;Habibulla /&gt;</a>
+      <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="md:hidden w-10 h-10 rounded-lg border border-slate-200 bg-white flex items-center justify-center text-slate-700"><i class="fas fa-bars"></i></button>
+      <div class="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="nav-link hover:text-indigo-600 transition" data-page="index.html">Home</a>
+        <a href="about.html" class="nav-link hover:text-indigo-600 transition" data-page="about.html">About</a>
+        <a href="projects.html" class="nav-link hover:text-indigo-600 transition" data-page="projects.html">Projects</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition" data-page="contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-1 text-sm font-semibold text-slate-700">
+      <a href="index.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">Home</a>
+      <a href="about.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">About</a>
+      <a href="projects.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">Projects</a>
+      <a href="contact.html" class="px-4 py-2.5 rounded-lg bg-indigo-600 text-white text-center">Contact</a>
+    </div>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-6 py-14">
+    <span class="font-mono text-xs font-bold uppercase tracking-widest text-indigo-600">Contact</span>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1 mb-2">Let&apos;s connect</h1>
+    <p class="text-slate-600 mb-8">Research collaboration, academic discussion ba software opportunity-r jonno message din.</p>
+
+    <form id="contact-form" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-5" novalidate>
+      <div>
+        <label for="name" class="block text-sm font-semibold mb-1.5">Full name</label>
+        <input id="name" name="name" type="text" class="form-input" placeholder="Apnar nam" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-semibold mb-1.5">Email</label>
+        <input id="email" name="email" type="email" class="form-input" placeholder="you@example.com" />
+      </div>
+
+      <div>
+        <label for="topic" class="block text-sm font-semibold mb-1.5">Topic</label>
+        <select id="topic" name="topic" class="form-input">
+          <option>Research collaboration</option>
+          <option>Academic discussion</option>
+          <option>Software project</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend class="block text-sm font-semibold mb-2">Preferred contact</legend>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <label class="inline-flex items-center gap-2"><input type="radio" name="pref" value="email" checked class="accent-indigo-600" /> Email</label>
+          <label class="inline-flex items-center gap-2"><input type="radio" name="pref" value="phone" class="accent-indigo-600" /> Phone</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="block text-sm font-semibold mb-2">I am interested in</legend>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <label class="inline-flex items-center gap-2"><input type="checkbox" name="interest" value="cv" class="accent-indigo-600" /> Computer vision</label>
+          <label class="inline-flex items-center gap-2"><input type="checkbox" name="interest" value="gis" class="accent-indigo-600" /> Remote sensing / GIS</label>
+          <label class="inline-flex items-center gap-2"><input type="checkbox" name="interest" value="web" class="accent-indigo-600" /> Web development</label>
+          <label class="inline-flex items-center gap-2"><input type="checkbox" name="interest" value="db" class="accent-indigo-600" /> Databases</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="message" class="block text-sm font-semibold mb-1.5">Message</label>
+        <textarea id="message" name="message" rows="5" class="form-input" placeholder="Apnar message likhun"></textarea>
+      </div>
+
+      <div class="flex items-center justify-between gap-4 flex-wrap">
+        <button type="submit" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-md transition">Send message</button>
+        <p id="form-msg" class="text-sm" aria-live="polite"></p>
+      </div>
+    </form>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-6 py-10 text-center text-xs text-slate-400 font-mono">Habibulla Toshia • 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>

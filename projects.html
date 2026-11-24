@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Habibulla Toshia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-50 text-slate-800 antialiased">
+
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-indigo-100/80 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-extrabold text-indigo-700 tracking-tight">&lt;Habibulla /&gt;</a>
+      <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="md:hidden w-10 h-10 rounded-lg border border-slate-200 bg-white flex items-center justify-center text-slate-700"><i class="fas fa-bars"></i></button>
+      <div class="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="nav-link hover:text-indigo-600 transition" data-page="index.html">Home</a>
+        <a href="about.html" class="nav-link hover:text-indigo-600 transition" data-page="about.html">About</a>
+        <a href="projects.html" class="nav-link hover:text-indigo-600 transition" data-page="projects.html">Projects</a>
+        <a href="contact.html" class="px-4 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition" data-page="contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-1 text-sm font-semibold text-slate-700">
+      <a href="index.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">Home</a>
+      <a href="about.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">About</a>
+      <a href="projects.html" class="px-4 py-2.5 rounded-lg hover:bg-indigo-50">Projects</a>
+      <a href="contact.html" class="px-4 py-2.5 rounded-lg bg-indigo-600 text-white text-center">Contact</a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-14">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div>
+        <span class="font-mono text-xs font-bold uppercase tracking-widest text-indigo-600">Work</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1">Research &amp; Projects</h1>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button data-filter="all" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-indigo-600 text-white transition">All</button>
+        <button data-filter="ai" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 transition">AI &amp; Vision</button>
+        <button data-filter="gis" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 transition">Remote Sensing</button>
+        <button data-filter="pathology" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 transition">Plant Pathology</button>
+        <button data-filter="software" class="filter-btn px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 transition">Software &amp; DB</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <article data-category="ai" class="showcase-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-800 mb-4">Research • AI &amp; Vision</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Comparative Study &amp; Detection of Rice Leaf Diseases Using Computer Vision</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Rice leaf blast ar brown spot differentiate korar jonno deep learning, data augmentation ar Out-of-Distribution (OOD) detection.</p>
+        </div>
+        <p class="mt-5 pt-4 border-t border-slate-100 text-xs font-mono text-teal-700 font-semibold">Ongoing • Computer Vision • OOD</p>
+      </article>
+
+      <article data-category="gis" class="showcase-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-800 mb-4">Research • Remote Sensing</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Spatiotemporal Analysis of Air Pollution and Its Correlation with Land Use Change in Dhaka Division</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Remote sensing diye multi-temporal air pollution ar LULC change er correlation analysis.</p>
+        </div>
+        <p class="mt-5 pt-4 border-t border-slate-100 text-xs font-mono text-indigo-700 font-semibold">Ongoing • LULC • Spatial Analysis</p>
+      </article>
+
+      <article data-category="pathology" class="showcase-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-800 mb-4">Research • Plant Pathology</span>
+          <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Identification and Prevalence of Fungal and Bacterial Diseases in Popular Indoor Ornamental Plants</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Symptom profile, disease identification ar prevalence rate-er upor research.</p>
+        </div>
+        <p class="mt-5 pt-4 border-t border-slate-100 text-xs font-mono text-slate-700 font-semibold">Ongoing • Disease Prevalence</p>
+      </article>
+
+      <article data-category="ai software" class="showcase-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center"><i class="fas fa-seedling"></i></span>
+            <a href="https://github.com/Habib-Coder01" target="_blank" class="text-slate-500 hover:text-indigo-600 text-lg" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Agricultural Disease Advisory System</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Leaf disease detection, disease library, scan history ar outbreak map sho web ar mobile platform.</p>
+        </div>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-indigo-700"><span class="px-2.5 py-1 rounded-md bg-indigo-50">React</span><span class="px-2.5 py-1 rounded-md bg-indigo-50">Flutter</span><span class="px-2.5 py-1 rounded-md bg-indigo-50">Deep Learning</span></div>
+      </article>
+
+      <article data-category="software" class="showcase-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-slate-800 text-white flex items-center justify-center"><i class="fas fa-hospital-user"></i></span>
+            <a href="https://github.com/Habib-Coder01/Hospitalmanagement" target="_blank" class="text-slate-500 hover:text-indigo-600 text-lg" title="Repository"><i class="fab fa-github"></i></a>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Hospital Management System</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Python ar MySQL diye patient record, doctor schedule ar appointment management.</p>
+        </div>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-slate-700"><span class="px-2.5 py-1 rounded-md bg-slate-100">Python</span><span class="px-2.5 py-1 rounded-md bg-slate-100">MySQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100">Database</span></div>
+      </article>
+
+      <article data-category="software" class="showcase-card bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center"><i class="fas fa-shirt"></i></span>
+            <a href="https://github.com/Habib-Coder01/garment-mini-project" target="_blank" class="text-slate-500 hover:text-indigo-600 text-lg" title="Repository"><i class="fab fa-github"></i></a>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Garment Mini Project</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Garment operation, order, inventory ar production record manage korar application.</p>
+        </div>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-slate-700"><span class="px-2.5 py-1 rounded-md bg-slate-100">Software Project</span><span class="px-2.5 py-1 rounded-md bg-slate-100">Management</span></div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-6 py-10 text-center text-xs text-slate-400 font-mono">Habibulla Toshia • 2026</footer>
+  <script src="script.js"></script>
+</body>
+</html>
