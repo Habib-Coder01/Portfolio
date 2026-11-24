@@ -45,11 +45,11 @@ if (form) {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!name || !emailOk || !form.message.value.trim()) {
       msg.className = 'text-sm font-semibold text-rose-600';
-      msg.textContent = 'Name, valid email ar message din.';
+      msg.textContent = 'Please enter your name, a valid email and a message.';
       return;
     }
     msg.className = 'text-sm font-semibold text-teal-700';
-    msg.textContent = 'Dhonnobad! Apnar message pathano hoyeche (demo).';
+    msg.textContent = 'Thank you! Your message has been sent (demo).';
     form.reset();
   });
 }
