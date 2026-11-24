@@ -35,7 +35,9 @@
     <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-1 mb-2">Let&apos;s connect</h1>
     <p class="text-slate-600 mb-8">Get in touch about research collaboration, academic discussion or software opportunities.</p>
 
-    <form id="contact-form" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-5" novalidate>
+    <form id="contact-form" name="contact" method="POST" action="contact.html?success=true" data-netlify="true" netlify-honeypot="bot-field" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8 space-y-5" novalidate>
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
       <div>
         <label for="name" class="block text-sm font-semibold mb-1.5">Full name</label>
         <input id="name" name="name" type="text" class="form-input" placeholder="Your name" />

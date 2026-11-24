@@ -38,18 +38,19 @@ filterButtons.forEach((btn) => {
 const form = document.getElementById('contact-form');
 if (form) {
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
     const msg = document.getElementById('form-msg');
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!name || !emailOk || !form.message.value.trim()) {
+      e.preventDefault();
       msg.className = 'text-sm font-semibold text-rose-600';
       msg.textContent = 'Please enter your name, a valid email and a message.';
-      return;
     }
-    msg.className = 'text-sm font-semibold text-teal-700';
-    msg.textContent = 'Thank you! Your message has been sent (demo).';
-    form.reset();
   });
+  if (new URLSearchParams(location.search).get('success') === 'true') {
+    const msg = document.getElementById('form-msg');
+    msg.className = 'text-sm font-semibold text-teal-700';
+    msg.textContent = 'Thank you! Your message has been sent.';
+  }
 }
